@@ -2,6 +2,9 @@ import Image from "next/image";
 
 import { Montserrat, Poppins, Inter } from "next/font/google";
 import Layout from "../components/layout/Layout";
+import Head from "next/head";
+import Announcement from "../components/Announcement";
+import Navbar from "../components/layout/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({
@@ -45,13 +48,43 @@ export const metadata = {
 export default function Home() {
   return (
     <Layout title="">
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        DENEME
-        <div className={`${montserrat.className} `}>
-          Footer İ ş Ğ Ü Ö Ç ç i ı
+      <Head>
+        <title>Erden GENCER</title>
+        <meta name="description" content="deneeme desription" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <header
+        className={`${montserrat.className} page-header page-header--transparent flex flex-col`}
+      >
+        <div className={`${poppins.className} `}>
+          <Announcement />
         </div>
-        <div className={`${poppins.className} `}>Footer İ ş Ğ Ü Ö Ç ç i ı</div>
+        <Navbar />
+      </header>
+      <main className="page ">
+        <div className="mx-auto w-full px-10">
+          <div className="block">
+            <Image
+              src="/VENTAS_EFIMERAS-V2_ADW_D_EN.jpg"
+              width={1855}
+              height={796}
+              alt="banner"
+            />
+          </div>
+          <div className="block">
+            <Image
+              src="/Perspective-SS23-Web-Body-Banner.jpg"
+              width={1855}
+              height={796}
+              alt="banner"
+            />
+          </div>
+        </div>
       </main>
+      <div className={`${montserrat.className} `}>Footer İ ş Ğ Ü Ö Ç ç i ı</div>
+      <div className={`${poppins.className} `}>Footer İ ş Ğ Ü Ö Ç ç i ı</div>
     </Layout>
   );
 }
