@@ -1,12 +1,15 @@
 import Image from "next/image";
-
-import { Montserrat, Poppins, Inter } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
-import Announcement from "../components/Announcement";
-import Navbar from "../components/layout/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+import {
+  ButtonStyle,
+  DenemeDiv,
+} from "../components/QuoteGenerator/QuoteGeneratorElements";
+import { ShoppingBagIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+
 const montserrat = Montserrat({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -49,42 +52,61 @@ export default function Home() {
   return (
     <Layout title="">
       <Head>
-        <title>Erden GENCER</title>
+        <title>Perspective</title>
         <meta name="description" content="deneeme desription" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header
-        className={`${montserrat.className} page-header page-header--transparent flex flex-col`}
-      >
-        <div className={`${poppins.className} `}>
-          <Announcement />
-        </div>
-        <Navbar />
-      </header>
       <main className="page ">
-        <div className="mx-auto w-full px-10">
+        <div className="mx-auto w-full px-2 lg:px-10">
           <div className="block">
-            <Image
-              src="/VENTAS_EFIMERAS-V2_ADW_D_EN.jpg"
-              width={1855}
-              height={796}
-              alt="banner"
-            />
+            <Link className="block" href={"/category/yeni-sezon"}>
+              <Image
+                src="/VENTAS_EFIMERAS-V2_ADW_D_EN.jpg"
+                width={1855}
+                height={796}
+                alt="banner"
+                priority={true}
+              />
+            </Link>
           </div>
           <div className="block">
-            <Image
-              src="/Perspective-SS23-Web-Body-Banner.jpg"
-              width={1855}
-              height={796}
-              alt="banner"
-            />
+            <Link className="block" href={"/category/kolleksiyon"}>
+              <Image
+                src="/Perspective-SS23-Web-Body-Banner.jpg"
+                width={1855}
+                height={796}
+                alt="banner"
+              />
+            </Link>
+          </div>
+          <div className="block h-64">
+            <p className="">The quick brown fox ...</p>
+            <p className="antialiased">The quick brown fox ...</p>
+            <p className="subpixel-antialiased">The quick brown fox ...</p>
+          </div>
+          <div className="block w-full">
+            <div className="flex justify-between text-base font-medium text-gray-900 subpixel-antialiased">
+              <h3 className="w-full">ERDEN</h3>
+              <p className="ml-4 w-full">{(3.144 * 100).toFixed(2)}</p>
+            </div>
           </div>
         </div>
       </main>
-      <div className={`${montserrat.className} `}>Footer İ ş Ğ Ü Ö Ç ç i ı</div>
-      <div className={`${poppins.className} `}>Footer İ ş Ğ Ü Ö Ç ç i ı</div>
+      <div
+        className={`${montserrat.className} mx-auto w-full px-10 bg-sinematv-500 antialiased`}
+      >
+        Footer İ ş Ğ Ü Ö Ç ç i ı
+      </div>
+      <DenemeDiv>
+        <ButtonStyle>
+          <ShoppingBagIcon className="h-6 w-6" />
+          <span className="block w-full text-left">
+            Sonsuz Oda eğitmenleri kimler?
+          </span>
+        </ButtonStyle>
+      </DenemeDiv>
     </Layout>
   );
 }
