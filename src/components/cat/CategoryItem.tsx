@@ -57,8 +57,8 @@ const CategoryItem = ({ item }: Props) => {
         <div className="bg-transparent flex items-center justify-center w-full z-20 border  overflow-hidden">
           <Image
             src={item.img}
-            width={1000}
-            height={500}
+            width={870}
+            height={1300}
             alt="banner"
             placeholder="blur"
             className="w-full block rounded transform duration-500 ease-in-out object-cover group-hover:scale-105 cursor-pointer"
