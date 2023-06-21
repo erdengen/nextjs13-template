@@ -1,8 +1,11 @@
 import Head from "next/head";
 import React from "react";
 import { Poppins } from "next/font/google";
-import Footer from "./Footer";
 import Header from "./Header";
+import dynamic from "next/dynamic";
+const Footer = dynamic(() => import("./Footer"), {
+  ssr: false,
+});
 type Props = {
   children?: React.ReactNode;
   title?: string;

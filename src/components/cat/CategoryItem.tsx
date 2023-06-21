@@ -63,7 +63,7 @@ const CategoryItem = ({ item }: Props) => {
             placeholder="blur"
             className="w-full block rounded transform duration-500 ease-in-out object-cover group-hover:scale-105 cursor-pointer"
             blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
-              "black"
+              "blue"
             )}`}
             priority={true}
           />
