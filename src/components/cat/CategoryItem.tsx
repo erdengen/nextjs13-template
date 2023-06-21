@@ -90,7 +90,7 @@ const CategoryItem = ({ item }: Props) => {
         <div>Delias Regular Fit Kruvaze İndigo Renk Pareo</div>
         <div className="flex flex-row justify-center items-center w-full ">
           <div className="PriceArea w-full flex justify-start items-center gap-2">
-            <span className="PPrice PPOldPrice text-red-500 line-through text-xs">
+            <span className="PPrice PPOldPrice text-[#5F0202] line-through text-xs font-semibold">
               3.499,00 ₺
             </span>
             <span className="PPrice font-bold">2.799,00 ₺</span>
@@ -123,7 +123,7 @@ const CategoryItem = ({ item }: Props) => {
           </div>
         </div>
         <div className="flex justify-start items-center w-full h-5">
-          <span className="PQuantity text-stone-400 text-xs">Tükeniyor</span>
+          <span className="PQuantity text-gray-700 text-xs">Tükeniyor</span>
         </div>
       </div>
     </div>
