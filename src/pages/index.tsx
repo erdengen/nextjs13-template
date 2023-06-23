@@ -9,6 +9,7 @@ import {
 } from "../components/QuoteGenerator/QuoteGeneratorElements";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { base64SolidImage } from "../utility/SolidImage";
 
 const montserrat = Montserrat({
   weight: ["400", "700"],
@@ -68,45 +69,53 @@ export default function Home() {
                 height={796}
                 alt="banner"
                 priority={true}
+                blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
+                  "blue"
+                )}`}
               />
             </Link>
+          </div>
+          <div className="block">OWN CAROUSEL</div>
+          <div className="block">Swiper OWN CAROUSEL</div>
+          <div className="block">
+            <div className="w-full block mx-auto">Video Player</div>
           </div>
           <div className="block">
-            <Link className="block" href={"/category/kolleksiyon"}>
-              <Image
-                src="/Perspective-SS23-Web-Body-Banner.jpg"
-                width={1855}
-                height={796}
-                alt="banner"
+            <h3 className={`${poppins.className} w-full block mx-auto`}>
+              SH
+              <span className={`${poppins.className} font-extrabold`}>O</span>P
+              THE L
+              <span className={`${poppins.className} font-extrabold`}>O</span>OK
+              <p className="font-normal text-sm">Your style, our style</p>
+            </h3>
+          </div>
+          <div className="block">
+            <div className="w-full block mx-auto">
+              Resim
+              <h3>FOLLOW US</h3>
+              <p>
+                We are waiting for you on our social networks. <br />
+                Everything happens here. Don't miss it.
+              </p>
+            </div>
+          </div>
+          <div className="block">
+            <div className="w-full block mx-auto text-center">
+              <h5>Receive our news</h5>
+              <p>
+                Subscribe to our Newsletter and get 15% off your next purchase.
+                Enjoy discounts and exclusive news.
+              </p>
+              <input
+                type="email"
+                className="form-input mx-auto tracking-wide font-light antialiased focus:ring-blue-500 focus:border-blue-500 block w-full md:w-2/4 p-2.5"
+                name="email"
+                placeholder="Enter your email here"
               />
-            </Link>
-          </div>
-          <div className="block h-64">
-            <p className="">The quick brown fox ...</p>
-            <p className="antialiased">The quick brown fox ...</p>
-            <p className="subpixel-antialiased">The quick brown fox ...</p>
-          </div>
-          <div className="block w-full">
-            <div className="flex justify-between text-base font-medium text-gray-900 subpixel-antialiased">
-              <h3 className="w-full">ERDEN</h3>
-              <p className="ml-4 w-full">{(3.144 * 100).toFixed(2)}</p>
             </div>
           </div>
         </div>
       </main>
-      <div
-        className={`${montserrat.className} mx-auto w-full px-10 bg-sinematv-500 antialiased`}
-      >
-        Footer İ ş Ğ Ü Ö Ç ç i ı
-      </div>
-      <DenemeDiv>
-        <ButtonStyle>
-          <ShoppingBagIcon className="h-6 w-6" />
-          <span className="block w-full text-left">
-            Sonsuz Oda eğitmenleri kimler?
-          </span>
-        </ButtonStyle>
-      </DenemeDiv>
     </Layout>
   );
 }

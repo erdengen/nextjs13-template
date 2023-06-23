@@ -13,6 +13,7 @@ const poppins = Poppins({
 const Header = (props: Props) => {
   return (
     <>
+      <Announcement />
       <header
         className={`${poppins.className} page-header page-header--transparent flex flex-col`}
       >

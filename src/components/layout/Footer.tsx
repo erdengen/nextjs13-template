@@ -8,7 +8,7 @@ const Footer = (props: Props) => {
       <div className="w-full flex items-center justify-center mb-5">Footer</div>
       <section className="footer_newsletter"></section>
       <section className="footer_links flex flex-row gap-1 justify-between items-center">
-        {[...Array(5)].map((x, i) => (
+        {[...Array(3)].map((x, i) => (
           <article key={i} className="w-full">
             <button className="btn bg-transparent font-semibold text-base leading-5 py-3">
               Help

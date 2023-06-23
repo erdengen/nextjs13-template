@@ -21,6 +21,9 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
   images: {
+    domains: [
+      "cdn.sorsware.com",
+    ],
     remotePatterns: [
       {
         protocol: 'https',

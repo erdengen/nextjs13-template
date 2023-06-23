@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: 500;
+  padding: 5px 0;
 `;
 
 const Announcement = () => {

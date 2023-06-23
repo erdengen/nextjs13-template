@@ -65,7 +65,7 @@ const Navbar = () => {
                 type="text"
                 name="search"
                 id="search"
-                className="w-full border-b  pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
+                className="w-full border-none border-b  pl-12 py-3 pr-3 rounded-l-md focus:outline-none"
                 placeholder="SEARCH"
               />
             </div>
@@ -110,7 +110,7 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className="hidden w-full md:flex justify-center items-center mt-5 p-2 pb-0 "
+            className="hidden w-full md:flex justify-center items-center  px-2 pb-0 "
             id="navbar-default"
           >
             <ul className="MainMenu transition-all ease-in duration-300 delay-100  flex flex-col p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 text-black">
@@ -118,7 +118,7 @@ const Navbar = () => {
                 <li
                   key={index}
                   className={`flex font-semibold rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
+              ${Menu.gap ? "mt-9" : "mt-0"} ${
                     index === 0 && "bg-light-white"
                   } `}
                 >
