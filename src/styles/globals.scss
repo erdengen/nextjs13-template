@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -45,6 +46,9 @@ body {
   }
   p{
     font-size: 0.875rem;
+  }
+  .slick-slide {
+    padding: 0 10px;
   }
 }
 .form-input {

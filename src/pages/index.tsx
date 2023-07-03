@@ -10,6 +10,9 @@ import {
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { base64SolidImage } from "../utility/SolidImage";
+import PlayerHome from "../components/PlayerHome";
+import SlickSlider from "../components/SlickSlider";
+import ShopTheLookSlider from "../components/ShopTheLookSlider";
 
 const montserrat = Montserrat({
   weight: ["400", "700"],
@@ -75,23 +78,41 @@ export default function Home() {
               />
             </Link>
           </div>
-          <div className="block">OWN CAROUSEL</div>
-          <div className="block">Swiper OWN CAROUSEL</div>
-          <div className="block">
-            <div className="w-full block mx-auto">Video Player</div>
+          <div className="block my-5 mx-16 ">
+            <SlickSlider />
           </div>
-          <div className="block">
-            <h3 className={`${poppins.className} w-full block mx-auto`}>
-              SH
-              <span className={`${poppins.className} font-extrabold`}>O</span>P
-              THE L
-              <span className={`${poppins.className} font-extrabold`}>O</span>OK
-              <p className="font-normal text-sm">Your style, our style</p>
-            </h3>
+        </div>
+
+        <div className="block">
+          <PlayerHome />
+        </div>
+        <div className="block my-5 ">
+          <div className="mx-auto w-full px-2 lg:px-10">
+            <div className="block my-5">
+              <h3 className={`${poppins.className} w-full block mx-auto`}>
+                SHOP THE LOOK
+                <p className="font-normal text-sm">Your style, our style</p>
+              </h3>
+            </div>
           </div>
-          <div className="block">
+          <ShopTheLookSlider />
+        </div>
+        <div className="mx-auto w-full px-2 lg:px-10 my-16 items-center justify-center">
+          <div className="flex flex-row gap-5 items-center justify-center">
             <div className="w-full block mx-auto">
-              Resim
+              <Image
+                src="/RRSS-WOMAN.webp"
+                width={863}
+                height={370}
+                alt="banner"
+                sizes="75vw"
+                priority={true}
+                blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
+                  "blue"
+                )}`}
+              />
+            </div>
+            <div className="w-full block mx-auto">
               <h3>FOLLOW US</h3>
               <p>
                 We are waiting for you on our social networks. <br />
@@ -100,7 +121,7 @@ export default function Home() {
             </div>
           </div>
           <div className="block">
-            <div className="w-full block mx-auto text-center">
+            <div className="w-full block mx-auto text-center my-5">
               <h5>Receive our news</h5>
               <p>
                 Subscribe to our Newsletter and get 15% off your next purchase.

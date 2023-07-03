@@ -31,6 +31,12 @@ const nextConfig = {
         port: '',
         pathname: '/perspective/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.theculturetrip.com',
+        port: '',
+        pathname: '/wp-content/**',
+      },
     ],
   },
 }
