@@ -3,11 +3,6 @@ import { Montserrat, Poppins } from "next/font/google";
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
 
-import {
-  ButtonStyle,
-  DenemeDiv,
-} from "../components/QuoteGenerator/QuoteGeneratorElements";
-import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { base64SolidImage } from "../utility/SolidImage";
 import PlayerHome from "../components/PlayerHome";
@@ -116,7 +111,7 @@ export default function Home() {
               <h3>FOLLOW US</h3>
               <p>
                 We are waiting for you on our social networks. <br />
-                Everything happens here. Don't miss it.
+                Everything happens here. Dont miss it.
               </p>
             </div>
           </div>
