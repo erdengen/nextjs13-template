@@ -73,7 +73,7 @@ export default function Home() {
               />
             </Link>
           </div>
-          <div className="block my-5 mx-16 ">
+          <div className="block my-5 md:mx-16 ">
             <SlickSlider />
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Home() {
           <ShopTheLookSlider />
         </div>
         <div className="mx-auto w-full px-2 lg:px-10 my-16 items-center justify-center">
-          <div className="flex flex-row gap-5 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
             <div className="w-full block mx-auto">
               <Image
                 src="/RRSS-WOMAN.webp"
@@ -113,21 +113,6 @@ export default function Home() {
                 We are waiting for you on our social networks. <br />
                 Everything happens here. Dont miss it.
               </p>
-            </div>
-          </div>
-          <div className="block">
-            <div className="w-full block mx-auto text-center my-5">
-              <h5>Receive our news</h5>
-              <p>
-                Subscribe to our Newsletter and get 15% off your next purchase.
-                Enjoy discounts and exclusive news.
-              </p>
-              <input
-                type="email"
-                className="form-input mx-auto tracking-wide font-light antialiased focus:ring-blue-500 focus:border-blue-500 block w-full md:w-2/4 p-2.5"
-                name="email"
-                placeholder="Enter your email here"
-              />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import "@/src/styles/globals.scss";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
+import "@/src/styles/globals.scss";
 
 import type { AppProps } from "next/app";
 

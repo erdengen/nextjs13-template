@@ -41,8 +41,9 @@ const SlickSlider = (props: Props) => {
     },
   ];
   const settings = {
-    dots: true,
-    infinite: false,
+    dots: false,
+    infinite: true,
+    arrows: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -68,35 +69,33 @@ const SlickSlider = (props: Props) => {
       },
       {
         breakpoint: 480,
+        arrows: false,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
   };
   return (
     <>
-      <Slider {...settings} className="">
+      <Slider {...settings}>
         {data?.map((item, index) => (
-          <div key={index} className="bg-transparent flex flex-col ">
-            <div className="w-full block relative aspect-video  b">
+          <div key={index} className="relative">
+            <div className="w-full block">
               <Image
                 src={item.image}
                 width={346}
                 height={520}
                 alt="banner"
                 placeholder="blur"
-                className="flex w-full cursor-pointer"
+                className="object-cover cursor-pointer w-full"
                 blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
                   "blue"
                 )}`}
                 priority={false}
               />
             </div>
-            <h3 className="hidden">
-              {index} {item.title}
-            </h3>
           </div>
         ))}
       </Slider>
