@@ -15,7 +15,7 @@ const Header = (props: Props) => {
     <>
       <Announcement />
       <header
-        className={`${poppins.className} page-header page-header--transparent flex flex-col`}
+        className={`${poppins.className} page-header page-header--transparent flex flex-col sticky top-0 z-50`}
       >
         <Navbar />
       </header>
