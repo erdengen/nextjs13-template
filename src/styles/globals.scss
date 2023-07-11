@@ -48,10 +48,32 @@ body {
   p{
     font-size: 0.875rem;
   }
-  .slick-slide {
-    padding: 0 10px;
+  .slick-slider{
+    .slick-arrow {
+      width: 40px;
+      height: 40px;
+      &:before{
+        font-size: 2rem;
+      }
+    }
+    .slick-next {
+      right: 15px;
+      z-index: 1;
+      &:before{
+        color:black;
+      }
+    }
+    .slick-prev {
+      left: 15px;
+      z-index: 1;
+      &:before{
+        color:black;
+      }
+    }
+    .slick-slide {
+      padding: 0 10px;
+    }
   }
-  
 }
 @media (max-width: 450px) { 
   
@@ -80,6 +102,9 @@ body {
     }
     .slick-prev {
       left: 15px;
+    }
+    .slick-prev::before, .slick-next::before {
+      color:black;
     }
   }
   

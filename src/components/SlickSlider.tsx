@@ -69,7 +69,7 @@ const SlickSlider = (props: Props) => {
       },
       {
         breakpoint: 480,
-        arrows: false,
+        dots: false,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -85,8 +85,8 @@ const SlickSlider = (props: Props) => {
             <div className="w-full block">
               <Image
                 src={item.image}
-                width={346}
-                height={520}
+                width={389}
+                height={585}
                 alt="banner"
                 placeholder="blur"
                 className="object-cover cursor-pointer w-full"

@@ -49,8 +49,9 @@ const ShopTheLookSlider = (props: Props) => {
     },
   ];
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
+    arrows: true,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 6,
@@ -59,6 +60,7 @@ const ShopTheLookSlider = (props: Props) => {
     responsive: [
       {
         breakpoint: 1024,
+        dots: true,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -68,6 +70,7 @@ const ShopTheLookSlider = (props: Props) => {
       },
       {
         breakpoint: 600,
+        dots: true,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -76,6 +79,8 @@ const ShopTheLookSlider = (props: Props) => {
       },
       {
         breakpoint: 480,
+        dots: false,
+        arrows: true,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

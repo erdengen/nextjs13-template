@@ -63,8 +63,8 @@ export default function Home() {
             <Link className="block" href={"/category/yeni-sezon"}>
               <Image
                 src="/VENTAS_EFIMERAS-V2_ADW_D_EN.jpg"
-                width={1855}
-                height={796}
+                width={1920}
+                height={814}
                 alt="banner"
                 priority={true}
                 blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
@@ -97,8 +97,8 @@ export default function Home() {
             <div className="w-full block mx-auto">
               <Image
                 src="/RRSS-WOMAN.webp"
-                width={863}
-                height={370}
+                width={1440}
+                height={613}
                 alt="banner"
                 sizes="75vw"
                 priority={true}
