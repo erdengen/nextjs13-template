@@ -9,11 +9,11 @@ const FooterAccordion = (props: Props) => {
 
   const { width, height } = useWindowSize();
   useEffect(() => {
-    if (width > 481) {
+    if (width >= 481) {
       setActiveIndex(99);
-      alert(5555);
+      console.log(5555);
     }
-  }, []);
+  }, [width]);
   const footerList = [
     {
       title: "Help",

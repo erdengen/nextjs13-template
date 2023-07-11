@@ -45,12 +45,11 @@ const AccordionLayout = ({
           )}
         </div>
       </div>
-      {activeIndex === index ||
-        (activeIndex === 99 && (
-          <div className="w-full shadow-3xl rounded-2xl shadow-cyan-500/50  mb-6">
-            {children}
-          </div>
-        ))}
+      {(activeIndex === index || activeIndex === 99) && (
+        <div className="w-full shadow-3xl rounded-2xl shadow-cyan-500/50  mb-6">
+          {children}
+        </div>
+      )}
     </>
   );
 };
