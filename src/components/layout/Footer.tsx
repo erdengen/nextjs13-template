@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import FooterAccordion from "../accordion/FooterAccordion";
 
 type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className=" my-5 ">
+    <footer className="my-5">
       <section className="footer_newsletter">
         <div className="block">
-          <div className="w-2/6 block mx-auto text-center my-16">
-            <h5>Receive our news</h5>
+          <div className="w-full md:w-2/6 block mx-auto text-center my-5 md:my-10">
+            <h4>Receive our news</h4>
             <p>
               Subscribe to our Newsletter and get 15% off your next purchase.
               Enjoy discounts and exclusive news.
@@ -23,64 +24,8 @@ const Footer = (props: Props) => {
           </div>
         </div>
       </section>
-      <section className="footer_links flex flex-col md:flex-row gap-1 justify-between items-center">
-        {[...Array(3)].map((x, i) => (
-          <article key={i} className="w-full">
-            <button className="btn bg-transparent font-semibold text-base leading-5 py-3">
-              Help
-            </button>
-            <ul className="text-xs font-thin">
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://adz.adolfodominguez.com"
-                >
-                  Investors
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://www.adolfodominguez.com/en-eu/work-with-us.html"
-                >
-                  Work with us
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://www.adolfodominguez.com/en-eu/press-area"
-                >
-                  Press area
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://www.adolfodominguez.com/en-eu/ad-heritage.html"
-                >
-                  Our history
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://www.adolfodominguez.com/en-eu/adrunway.html"
-                >
-                  Runways
-                </a>
-              </li>
-              <li className="">
-                <a
-                  className="inline-block py-1 leading-5"
-                  href="https://www.adolfodominguez.com/en-eu/campaigns.html"
-                >
-                  Campaign
-                </a>
-              </li>
-            </ul>
-          </article>
-        ))}
+      <section className="footer_links flex flex-col md:flex-row gap-1 justify-between">
+        <FooterAccordion />
 
         <article className="w-full flex flex-row items-center justify-start gap-3">
           <button

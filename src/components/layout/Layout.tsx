@@ -21,7 +21,7 @@ const Layout = ({ children, title = "Profilim" }: Props) => {
       <Header />
       {children}
       <div
-        className={`${poppins.className} mx-auto w-full px-10 text-dark-black-500`}
+        className={`${poppins.className} mx-auto w-full px-3 md:px-10 text-dark-black-500`}
       >
         <Footer />
       </div>
