@@ -104,8 +104,8 @@ export default function Home() {
           <ShopTheLookSlider />
         </div>
         <div className="mx-auto w-full px-2 lg:px-10 my-16 items-center justify-center">
-          <div className="w-5/6 mx-auto flex flex-col md:flex-row gap-5 items-center justify-center">
-            <div className="w-3/5 block mx-auto">
+          <div className="w-full lg:w-5/6 mx-auto flex flex-col md:flex-row gap-5 items-center justify-center">
+            <div className="w-full lg:w-3/5 block mx-auto">
               <Image
                 src="/RRSS-WOMAN.webp"
                 width={1440}
@@ -118,7 +118,7 @@ export default function Home() {
                 )}`}
               />
             </div>
-            <div className="w-2/5 block mx-auto">
+            <div className="w-full lg:w-2/5 block mx-auto">
               <h3>BİZİ TAKİP EDİN</h3>
               <p>
                 Sosyal ağlarımızda sizleri bekliyoruz. Her şey burada olur.
