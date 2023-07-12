@@ -30,7 +30,7 @@ const AccordionLayout = ({
               activeIndex === index ? "font-bold" : "font-semibold"
             }`}
           >
-            {title} {activeIndex}
+            {title} <span className="hidden">{activeIndex}</span>
           </div>
         </div>
         <div className="flex items-center justify-center">

@@ -5,9 +5,20 @@ import Head from "next/head";
 
 import Link from "next/link";
 import { base64SolidImage } from "../utility/SolidImage";
-import PlayerHome from "../components/PlayerHome";
-import SlickSlider from "../components/SlickSlider";
-import ShopTheLookSlider from "../components/ShopTheLookSlider";
+import dynamic from "next/dynamic";
+const PlayerHome = dynamic(() => import("../components/PlayerHome"), {
+  ssr: false,
+});
+const SlickSlider = dynamic(() => import("../components/SlickSlider"), {
+  ssr: false,
+});
+const ShopTheLookSlider = dynamic(
+  () => import("../components/ShopTheLookSlider"),
+  { ssr: false }
+);
+const FollowUs = dynamic(() => import("../components/misc/FollowUs"), {
+  ssr: false,
+});
 
 const montserrat = Montserrat({
   weight: ["400", "700"],
@@ -93,12 +104,12 @@ export default function Home() {
           <ShopTheLookSlider />
         </div>
         <div className="mx-auto w-full px-2 lg:px-10 my-16 items-center justify-center">
-          <div className="flex flex-col md:flex-row gap-5 items-center justify-center">
-            <div className="w-full block mx-auto">
+          <div className="w-5/6 mx-auto flex flex-col md:flex-row gap-5 items-center justify-center">
+            <div className="w-3/5 block mx-auto">
               <Image
                 src="/RRSS-WOMAN.webp"
                 width={1440}
-                height={613}
+                height={813}
                 alt="banner"
                 sizes="75vw"
                 priority={true}
@@ -107,12 +118,13 @@ export default function Home() {
                 )}`}
               />
             </div>
-            <div className="w-full block mx-auto">
-              <h3>FOLLOW US</h3>
+            <div className="w-2/5 block mx-auto">
+              <h3>BİZİ TAKİP EDİN</h3>
               <p>
-                We are waiting for you on our social networks. <br />
-                Everything happens here. Dont miss it.
+                Sosyal ağlarımızda sizleri bekliyoruz. Her şey burada olur.
+                kaçırmayın.
               </p>
+              <FollowUs />
             </div>
           </div>
         </div>
