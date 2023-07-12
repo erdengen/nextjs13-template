@@ -98,6 +98,7 @@ const Navbar = () => {
                 </div>
               </a>
               <a
+                aria-label="Giriş Yap"
                 href="#"
                 className=" flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition relative px-3"
               >

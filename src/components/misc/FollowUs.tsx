@@ -7,6 +7,8 @@ const FollowUs = ({}: Props) => {
     <>
       <article className="w-full flex flex-row items-center justify-start gap-3 my-3">
         <button
+          id="buttonFacebook"
+          title="Facebook"
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
@@ -22,6 +24,8 @@ const FollowUs = ({}: Props) => {
           </svg>
         </button>
         <button
+          id="buttonInstegram"
+          title="Instegram"
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
@@ -37,6 +41,8 @@ const FollowUs = ({}: Props) => {
           </svg>
         </button>
         <button
+          id="buttonYoutube"
+          title="Youtube"
           type="button"
           data-te-ripple-init
           data-te-ripple-color="light"
