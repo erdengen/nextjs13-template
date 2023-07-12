@@ -90,6 +90,14 @@ const ShopTheLookSlider = (props: Props) => {
   };
   return (
     <>
+      <div className="mx-auto w-full px-2 lg:px-10">
+        <div className="block my-5">
+          <h3 className={`w-full block mx-auto`}>
+            SHOP THE LOOK
+            <p className="font-normal text-sm">Your style, our style</p>
+          </h3>
+        </div>
+      </div>
       <Slider {...settings} className="">
         {data?.map((item, index) => (
           <div key={index} className="bg-transparent flex flex-col ">

@@ -6,19 +6,24 @@ import Head from "next/head";
 import Link from "next/link";
 import { base64SolidImage } from "../utility/SolidImage";
 import dynamic from "next/dynamic";
-const PlayerHome = dynamic(() => import("../components/PlayerHome"), {
-  ssr: false,
-});
+
 const SlickSlider = dynamic(() => import("../components/SlickSlider"), {
   ssr: false,
 });
+const PlayerHome = dynamic(() => import("../components/PlayerHome"), {
+  ssr: false,
+});
+
 const ShopTheLookSlider = dynamic(
   () => import("../components/ShopTheLookSlider"),
   { ssr: false }
 );
-const FollowUs = dynamic(() => import("../components/misc/FollowUs"), {
-  ssr: false,
-});
+const SosyalPlatform = dynamic(
+  () => import("../components/misc/SosyalPlatform"),
+  {
+    ssr: false,
+  }
+);
 
 const montserrat = Montserrat({
   weight: ["400", "700"],
@@ -84,49 +89,19 @@ export default function Home() {
               />
             </Link>
           </div>
-          <div className="block my-5 md:mx-16 ">
-            <SlickSlider />
-          </div>
         </div>
 
-        <div className="block">
+        <div className="block my-5 md:mx-16 min-h-[294px]">
+          <SlickSlider />
+        </div>
+        <div className="block min-h-[240px]">
           <PlayerHome />
         </div>
-        <div className="block my-5 ">
-          <div className="mx-auto w-full px-2 lg:px-10">
-            <div className="block my-5">
-              <h3 className={`${poppins.className} w-full block mx-auto`}>
-                SHOP THE LOOK
-                <p className="font-normal text-sm">Your style, our style</p>
-              </h3>
-            </div>
-          </div>
+        <div className="block my-5 min-h-[500px]">
           <ShopTheLookSlider />
         </div>
         <div className="mx-auto w-full px-2 lg:px-10 my-16 items-center justify-center">
-          <div className="w-full lg:w-5/6 mx-auto flex flex-col md:flex-row gap-5 items-center justify-center">
-            <div className="w-full lg:w-3/5 block mx-auto">
-              <Image
-                src="/RRSS-WOMAN.webp"
-                width={1440}
-                height={813}
-                alt="banner"
-                sizes="75vw"
-                priority={true}
-                blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
-                  "blue"
-                )}`}
-              />
-            </div>
-            <div className="w-full lg:w-2/5 block mx-auto">
-              <h3>BİZİ TAKİP EDİN</h3>
-              <p>
-                Sosyal ağlarımızda sizleri bekliyoruz. Her şey burada olur.
-                kaçırmayın.
-              </p>
-              <FollowUs />
-            </div>
-          </div>
+          <SosyalPlatform />
         </div>
       </main>
     </Layout>
