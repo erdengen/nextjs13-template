@@ -97,9 +97,9 @@ const Navbar = () => {
                   2
                 </div>
               </a>
-              <a
+              <Link
                 aria-label="Giriş Yap"
-                href="#"
+                href="/auth/login"
                 className=" flex flex-col items-center justify-center text-center text-gray-700 hover:text-primary transition relative px-3"
               >
                 <UserIcon className="h-6 w-6 text-black" />
@@ -107,7 +107,7 @@ const Navbar = () => {
                 <div className="hidden text-xs leading-3 font-semibold">
                   Account
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div

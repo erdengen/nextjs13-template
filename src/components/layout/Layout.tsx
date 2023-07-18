@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import { Poppins } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import Header from "./Header";
 import dynamic from "next/dynamic";
 const Footer = dynamic(() => import("./Footer"), {
@@ -10,7 +10,8 @@ type Props = {
   children?: React.ReactNode;
   title?: string;
 };
-const poppins = Poppins({
+
+const beVietnamPro = Be_Vietnam_Pro({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-pappins",
@@ -19,9 +20,10 @@ const Layout = ({ children, title = "Profilim" }: Props) => {
   return (
     <>
       <Header />
-      {children}
+      <div className={`${beVietnamPro.className} w-full block`}>{children}</div>
+
       <div
-        className={`${poppins.className} mx-auto w-full px-3 md:px-10 text-dark-black-500`}
+        className={`${beVietnamPro.className} mx-auto w-full px-3 md:px-10 text-dark-black-500`}
       >
         <Footer />
       </div>

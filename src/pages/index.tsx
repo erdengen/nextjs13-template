@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Montserrat, Poppins } from "next/font/google";
+
 import Layout from "../components/layout/Layout";
 import Head from "next/head";
 
@@ -25,16 +25,6 @@ const SosyalPlatform = dynamic(
   }
 );
 
-const montserrat = Montserrat({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-});
-const poppins = Poppins({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-pappins",
-});
 export const metadata = {
   title: {
     default: "E-Commerce Web App",
@@ -78,11 +68,12 @@ export default function Home() {
           <div className="block">
             <Link className="block" href={"/category/yeni-sezon"}>
               <Image
-                src="/VENTAS_EFIMERAS-V2_ADW_D_EN.jpg"
-                width={1920}
-                height={814}
+                src="/assets/Perspective-SS23-Web-Slider-1366x630px.jpg"
+                width={1366}
+                height={630}
                 alt="banner"
                 priority={true}
+                className="w-full"
                 blurDataURL={`data:image/svg+xml;base64,${base64SolidImage(
                   "blue"
                 )}`}
@@ -91,7 +82,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="block my-5 md:mx-16 min-h-[294px]">
+        <div className="mx-auto w-full px-2 lg:px-8 my-5  min-h-[294px]">
           <SlickSlider />
         </div>
         <div className="block min-h-[240px]">

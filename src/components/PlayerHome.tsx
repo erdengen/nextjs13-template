@@ -8,7 +8,7 @@ const PlayerHome = (props: Props) => {
   return (
     <>
       <ReactPlayer
-        url="/assets/video/comercial-9215-medium.mp4"
+        url="/assets/video/Perspective-Web-Slider-1366x630px.mp4"
         autoPlay={true}
         playing={true}
         muted={true}

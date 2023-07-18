@@ -1,12 +1,12 @@
 import React from "react";
 import Announcement from "../Announcement";
 import Navbar from "./Navbar";
-import { Montserrat, Poppins, Inter } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 
 type Props = {};
 
-const poppins = Poppins({
-  weight: ["400", "600", "700"],
+const beVietnamPro = Be_Vietnam_Pro({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-pappins",
 });
@@ -15,7 +15,7 @@ const Header = (props: Props) => {
     <>
       <Announcement />
       <header
-        className={`${poppins.className} page-header page-header--transparent flex flex-col sticky top-0 z-50`}
+        className={`${beVietnamPro.className} page-header page-header--transparent flex flex-col sticky top-0 z-50`}
       >
         <Navbar />
       </header>
