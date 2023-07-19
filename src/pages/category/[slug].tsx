@@ -45,9 +45,9 @@ const CategoryPage = (props: Props) => {
           </button>
         </div>
         <div
-          className={`grid grid-cols-1 ${
+          className={`grid grid-cols-2 ${
             grid == 2 ? "md:grid-cols-2" : "md:grid-cols-4"
-          } gap-4 gap-y-10`}
+          } gap-2 gap-y-10`}
         >
           {popularProducts.map((item) => (
             <CategoryItem item={item} key={item.id} />

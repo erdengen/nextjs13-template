@@ -88,23 +88,23 @@ const CategoryItem = ({ item }: Props) => {
       </Container>
       <div className=" flex flex-col w-full gap-2 px-2">
         <div>Delias Regular Fit Kruvaze İndigo Renk Pareo</div>
-        <div className="flex flex-row justify-center items-center w-full ">
-          <div className="PriceArea w-full flex justify-start items-center gap-2">
-            <span className="PPrice PPOldPrice text-[#5F0202] line-through text-xs font-semibold">
+        <div className="flex flex-col lg:flex-row justify-center items-center w-full ">
+          <div className="PriceArea w-full flex justify-between lg:justify-start items-center gap-0 lg:gap-2 text-xs">
+            <span className="flex PPrice PPOldPrice text-[#5F0202] line-through text-[.610rem] font-semibold">
               3.499,00 ₺
             </span>
-            <span className="PPrice font-bold">2.799,00 ₺</span>
-            <div>
+            <span className="flex PPrice font-bold">2.799,00 ₺</span>
+            <div className="flex">
               <div className="badge badge-right-bottom">
                 <div className="ImgAndDiscountBadge">
-                  <span className="discount text-white bg-black py-1 px-2">
+                  <span className="discount text-white bg-black py-1 px-2 text-[.610rem]">
                     %20
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-full flex justify-end gap-2">
+          <div className="w-full flex justify-center lg:justify-end gap-2">
             <div className="border-transparent hover:border-black border-b py-1">
               <span className="block w-4 h-4 rounded-full bg-red-400"></span>
             </div>
@@ -123,7 +123,9 @@ const CategoryItem = ({ item }: Props) => {
           </div>
         </div>
         <div className="flex justify-start items-center w-full h-5">
-          <span className="PQuantity text-gray-700 text-xs">Tükeniyor</span>
+          <span className="PQuantity text-gray-700 text-[.590rem] lg:text-xs ">
+            Tükeniyor
+          </span>
         </div>
       </div>
     </div>

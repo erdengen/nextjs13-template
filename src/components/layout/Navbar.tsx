@@ -45,7 +45,7 @@ const Navbar = () => {
                   }
                 }}
               />
-              <Link href="/" className="block w-60">
+              <Link href="/" className="block w-52 lg:w-60">
                 <Image
                   src="/perspective_d.webp"
                   width={728}
